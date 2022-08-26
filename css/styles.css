@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  Nav Bar Styles  */
+nav{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+
+    background-color: hsla(20, 50%, 50%, 1);
+}
+nav > ul{
+    list-style: none;
+    padding: 0.5em;
+}
+nav > ul > li{
+    display: inline-block;
+
+    font-size: min(1em, 4vw);
+    padding: 0.25em;
+    color: aliceblue;
+}
+li.active{
+    color: black;
+}
+nav > ul > li > a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/*  Landing Page Header Styles  */
+.head {
+    height: 25vh;
+
+    font-size: min(5.5em, 17vw);
+    color: hsla(10, 50%, 0%, 1);
+}
+
+/*  Main Body Styles    */
+main > section{
+    scroll-snap-align: end;
+    height: calc(100vh - 100px);
+    padding: 2em;
+    color: azure;
+}
+main > section:nth-of-type(odd){
+    background-color: hsla(0, 60%, 60%, 1);
+}
+main > section:nth-of-type(even){
+    background-color: hsla(250, 60%, 60%, 1);
+}
+main > section > header{
+    color: hsla(150, 60%, 10%, 1);
+    font-size: min(4em, 15vw);
+    padding: 0 0 0.5em 0;
+}
+main > section > p{
+    font-size: min(1.5em, 5vw);
+    line-height: 2;
+}
+
+@media screen and (max-width: 1100px) {
+    main > section{
+        height: fit-content;
+    }
+}
